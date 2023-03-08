@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+          <listener
+             class-name="Retry.SetTestParameter"/>    <!-- we are listener fully qualified path -->
+          
+  
+         
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testNG.TestNG_Retry_Failed_TestCases"/>     <!-- Test fully qualified path -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- We already have setTestParameter class in that we implements listener annotation  -->
+<!-- and we are applying setTestParameter(listener) on main class by mentioning in testNG.xml report  -->
+<!-- we are mentioning xml bcz we can extends listener implementation class to every test case ,so we cam mention only one time in testNG.xml file -->
